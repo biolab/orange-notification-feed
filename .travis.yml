@@ -1,0 +1,25 @@
+language: python
+python:
+- '3.6'
+
+branches:
+  only:
+  - master
+
+install:
+- pip install -r requirements.txt
+script:
+- ".travis/generate-feed.py"
+
+git:
+  depth: 1
+
+deploy:
+    provider: pages
+    target_branch: generated-feed
+    local_dir: out
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep_history: true
+    on:
+        branch: master
