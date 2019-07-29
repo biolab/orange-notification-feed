@@ -6,8 +6,8 @@
   link: https://orange.biolab.si/
   reject_button_label: 'No'
   requirements:
-    installed:
-    - Orange3-Bioinformatics>3.22
+    local_config:
+    - error-reporting/send-statistics==true
   start: 2019-06-02
   text: "We want to get to know our users better.\n Would you care to fill out a 1-minute\
     \ survey?"
