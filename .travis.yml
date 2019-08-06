@@ -1,0 +1,28 @@
+language: python
+python:
+- '3.6'
+
+branches:
+  only:
+  - master
+
+install:
+- pip install -r requirements.txt
+script:
+- ".travis/generate-feed.py"
+
+git:
+  depth: 1
+
+env:
+  global:
+    secure: fdIGJwQZgzAGIHMbK9TDMK7rg8c7OEU852EjbCDwpuO+Tv79XMj+AL5tijcAGCQ5zPoqi6mqC6bZt9GW37kxAP2TGX6iB4U+tYkD6dR8P09LEncRe7CA3G0VZOWN5jSnYznFgNE+ouknIrjaInCPK6l8myRol9IhgmisM3UhDt+ubjqmCJOG06EiXWoXlhKo5V/42q5+V8LXwSc2MROIrOb9yYmbfxgLSSwIgYzG0yREXA0oARLTfoD8b8s844cvZnPu055ETnBnt0x3Zc9zszdeompCUUT4UGIAVnIR3RpbRJu4VpJjXjHuLDFFgG5bhVpmNq8g5xVVZfwNaUEt5kUCuMZPBJe96jaCELNUnJQPNZHKXnWpDrt5RzSnzh7xgpXgmCBtGchCs/Hkq4jHw36ZKNSmqa4XHcM2d7SKHrmDwyKDSo3qewnSB+ZHGuJY7KA6F3sqyAFn0Ov+RS+vBDiSZH699NjBZW1HxzGFxxyHdrsSpofVr2JKr/SL8ncMySDC+uOiuRut6QlvixjA5ceVxVT7QwX0NFxnAu0JEDak5Z0SA5QLYkTiIEfGBT5oMgsXniHjdXT1w4BZubXrY9KqZ9RJLZfTzaxESCECjL7zq48TCwU9bunSh7TF3rjqe0/RFnpvjElGDMq6Vcg6EuthSODq/etTa0B0RWNil9U=
+
+deploy:
+    provider: pages
+    target_branch: generated-feed
+    skip_cleanup: true
+    github_token: $GH_TOKEN
+    keep_history: true
+    on:
+        branch: master

@@ -1,0 +1,15 @@
+# test notification
+start: 2019-06-02
+end: 2019-08-05
+requirements:
+    installed:
+        - Orange3<3.40
+    local_config:
+        - startup/launch-count>5
+        - startup/check-updates==false
+icon: "icons/Dlg_down3.png" # path to icon
+title: "Questionnaire"
+text: "We want to get to know our users better.\n Would you care to fill out a 1-minute survey?"
+link: "https://orange.biolab.si/" # e.g. http://orange.biolab.si/, orange://welcome
+accept_button_label: 'Ok'
+reject_button_label: 'No'
