@@ -1,8 +1,0 @@
-# test notification
-start: 2019-06-02
-icon: "icons/Dlg_down3.png" # path to icon
-title: "Questionnaire"
-text: "This notification is missing some information"
-link: "https://orange.biolab.si/" # e.g. http://orange.biolab.si/, orange://welcome
-accept_button_label: 'Ok'
-reject_button_label: 'No'
