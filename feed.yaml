@@ -1,6 +1,6 @@
 - !Notification
   accept_button_label: Ok
-  end: 2019-08-05
+  end: 2019-08-10
   icon: icons/Dlg_down3.png
   id: testnotif
   link: https://orange.biolab.si/
