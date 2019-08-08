@@ -19,7 +19,7 @@
 - !Notification
   accept_button_label: Ok
   end: null
-  icon: icons/Dlg_down3.png
+  icon: null
   id: test2
   link: https://orange.biolab.si/
   reject_button_label: 'No'
@@ -27,4 +27,4 @@
   start: 2019-06-02
   text: This notification is missing some information
   title: Questionnaire
-  type: null
+  type: announcement
