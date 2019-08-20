@@ -7,6 +7,9 @@ import yaml
 from pathlib import Path
 
 
+OPERATORS = {"<", ">", "<=", ">=", "=="}
+
+
 class SpecifiedYAMLNotification:
     """
     Class used for safe loading of yaml files.
@@ -35,6 +38,26 @@ class SpecifiedYAMLNotification:
         self.link = link
         self.accept_button_label = accept_button_label
         self.reject_button_label = reject_button_label
+
+
+def translate_installed_requirements(installed: [str]):
+    # if an installed requirements has no operator, it's syntactic sugar for either installed
+    # or not installed, denoted by >= 0 and == -1 respectively
+    without_operator = [s for s in installed if not any(op in s for op in OPERATORS)]
+    for req in without_operator:
+        installed.remove(req)
+        if req[0] == "~":
+            installed.append(req[1:] + "==-1")
+        else:
+            installed.append(req + ">=0")
+
+    # as not installed is represented by version -1, if < or <= check, add >= 0 check
+    less_operator = [s for s in installed if any(op in s for op in ["<", "<="])]
+    for req in less_operator:
+        split = req.split("<")
+        installed.append(split[0] + ">=0")
+
+    return installed
 
 
 class GeneratedYAMLNotification(yaml.YAMLObject):
@@ -72,12 +95,22 @@ class GeneratedYAMLNotification(yaml.YAMLObject):
 
     @staticmethod
     def from_specified(notif: SpecifiedYAMLNotification):
+        # translate requirements syntactic sugar
+        requirements = notif.requirements
+        if requirements and "installed" in requirements:
+            requirements["installed"] = translate_installed_requirements(
+                requirements["installed"]
+            )
+
+        if not notif.reject_button_label and not notif.accept_button_label:
+            notif.accept_button_label = "Ok"
+
         return GeneratedYAMLNotification(
             None,
             notif.type,
             notif.start,
             notif.end,
-            notif.requirements,
+            requirements,
             notif.icon,
             notif.title,
             notif.text,

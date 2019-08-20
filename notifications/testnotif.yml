@@ -1,9 +1,10 @@
 # test notification
 start: 2019-06-02
-end: 2019-08-10
 requirements:
     installed:
         - Orange3<3.40
+        - Orange3-Bioinformatics
+        - ~Orange3-Educational
     local_config:
         - startup/launch-count>5
         - startup/check-updates==false

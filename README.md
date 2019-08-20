@@ -17,11 +17,11 @@ For example:
 20190729-survey.yaml
 ```
 
-Should any information be missing from a notification, it will either be replaced by a default value (as is the case with the button labels), or simply omitted (as is the case with type, requirements, start/end date).
+Should any information be missing from a notification, it will either be replaced by a default value (as is the case with the button labels -- an "Ok" accept label is added if nor an accept nor reject label are present), or simply omitted (as is the case with type, requirements, start/end date).
 
 Note, to implement a custom function, change the `open_link` function in Orange's `__main__.py`, such that a link with the `orange` scheme (starting with 'orange://') defines custom behavior.
 
-### Notification Template
+### Notification Template and Specifics
 
 ```
 start: YYYY-MM-DD
@@ -29,28 +29,38 @@ end: YYYY-MM-DD
 type: (announcement|blog|new-features)
 requirements:
     installed:
-        - [package-name][operation][value]
-    local_config
-        - [config-option][operation][value]
+        - [package-name][operator][value]  # check package version
+        - [package-name]  # check if package is installed
+        - ~[package-name]  # check if package is not installed
+    local_config  
+        - [config-option][operator][value]
 icon: [path-string]  # relative to Orange directory
 title: [string]
 text: [string]  # can contain hrefs
-link: [string]  # implement custom actions with orange:// scheme
+link: [url-string]  # implement custom actions with orange:// scheme
 accept_button_label: [string]
 reject_button_label: [string]
 ```
+
+Supported operators: `<`, `>`, `<=`, `>=`, `==`
+
+In an installed requirement:
+- `[package-name]` is syntactic sugar for `[package-name]>=0` (package is installed).
+- `~[package-name]` is syntactic sugar for `[package-name]==-1` (package is not installed).
+
+When requiring a local configuration value, the required value is cast from string to the configuration's value before comparison, with the exception of booleans: `True`, `true`, `1`, `False`, `false`, `0` correctly map to a boolean value when compared against a boolean local configuration value.
 
 ### Example notification
 
 ```
 start: 2019-06-02
 end: 2019-06-05
-type: events
+type: announcement
 requirements:
     installed:
         - Orange3>=3.20
-        - Orange3-Bioinformatics<3.5
-        - Orange3-Educational==0.2.1
+        - Orange3-Bioinformatics
+        - ~Orange3-Educational
     local_config:
         - startup/launch-count>5
         - error-reporting/send-statistics==true 
