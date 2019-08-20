@@ -8,6 +8,9 @@
   requirements:
     installed:
     - Orange3<3.40
+    - Orange3-Bioinformatics>=0
+    - Orange3-Educational==-1
+    - Orange3>=0
     local_config:
     - startup/launch-count>5
     - startup/check-updates==false
