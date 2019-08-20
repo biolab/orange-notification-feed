@@ -20,12 +20,12 @@
   title: Questionnaire
   type: null
 - !Notification
-  accept_button_label: Ok
+  accept_button_label: null
   end: null
   icon: null
   id: test2
   link: https://orange.biolab.si/
-  reject_button_label: 'No'
+  reject_button_label: null
   requirements: null
   start: 2019-06-02
   text: This notification is missing some information
