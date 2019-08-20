@@ -20,7 +20,7 @@
   title: Questionnaire
   type: null
 - !Notification
-  accept_button_label: null
+  accept_button_label: Ok
   end: null
   icon: null
   id: test2
