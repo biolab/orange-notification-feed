@@ -1,6 +1,0 @@
-# test notification
-start: 2019-06-02
-type: announcement
-title: "Questionnaire"
-text: "This notification is missing some information"
-link: "https://orange.biolab.si/" # e.g. http://orange.biolab.si/, orange://welcome
