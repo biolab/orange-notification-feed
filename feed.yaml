@@ -1,33 +1,16 @@
 - !Notification
   accept_button_label: Ok
   end: null
-  icon: icons/Dlg_down3.png
-  id: testnotif
-  link: https://orange.biolab.si/
+  icon: canvas/icons/short-survey.png
+  id: 23082019-shortSurvey
+  link: https://orange.biolab.si/survey/short.html
   reject_button_label: 'No'
   requirements:
-    installed:
-    - Orange3<3.40
-    - Orange3-Bioinformatics>=0
-    - Orange3-Educational==-1
-    - Orange3>=0
     local_config:
     - startup/launch-count>5
-    - startup/check-updates==false
-  start: 2019-06-02
-  text: "We want to get to know our users better.\n Would you care to fill out a 1-minute\
-    \ survey?"
-  title: Questionnaire
+  start: null
+  text: 'We want to get to know our users better.
+
+    Would you care to fill out a 1-minute survey?'
+  title: Short survey
   type: null
-- !Notification
-  accept_button_label: Ok
-  end: null
-  icon: null
-  id: test2
-  link: https://orange.biolab.si/
-  reject_button_label: null
-  requirements: null
-  start: 2019-06-02
-  text: This notification is missing some information
-  title: Questionnaire
-  type: announcement
