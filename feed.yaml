@@ -14,3 +14,21 @@
     Would you care to fill out a 1-minute survey?'
   title: Short survey
   type: null
+- !Notification
+  accept_button_label: Ok
+  end: null
+  icon: canvas/icons/statistics-request.png
+  id: 13092019-statisticsRequest
+  link: orange://enable-statistics
+  reject_button_label: 'No'
+  requirements:
+    installed:
+    - Orange3>3.23
+    local_config:
+    - error-reporting/send-statistics==false
+  start: null
+  text: Do you wish to opt-in to sharing statistics about how you use Orange? All
+    information is anonymized and used exclusively for understanding how users interact
+    with Orange.
+  title: Anonymous Usage Statistics
+  type: null
