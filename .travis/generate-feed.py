@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-
-import sys
+import datetime
+import shutil
 import os
 import glob
 import yaml
@@ -102,14 +102,20 @@ class GeneratedYAMLNotification(yaml.YAMLObject):
                 requirements["installed"]
             )
 
+        # move up start date, move back end date
+        # in Orange, start and end are specified exclusively as opposed to inclusively
+        start = notif.start - datetime.timedelta(days=1) if notif.start else None
+        end = notif.end + datetime.timedelta(days=1) if notif.end else None
+
+        # set accept button to Ok if no buttons are specified
         if not notif.reject_button_label and not notif.accept_button_label:
             notif.accept_button_label = "Ok"
 
         return GeneratedYAMLNotification(
             None,
             notif.type,
-            notif.start,
-            notif.end,
+            start,
+            end,
             requirements,
             notif.icon,
             notif.title,
@@ -132,8 +138,9 @@ def parse_yamls():
             loaded = yaml.safe_load(f)
             y = SpecifiedYAMLNotification(**loaded)
             generated = GeneratedYAMLNotification.from_specified(y)
-        except:
+        except Exception as e:
             print("Failed to load " + path)
+            print(e)
             continue
         generated.id = Path(path).stem
         out.append(generated)
@@ -145,6 +152,8 @@ def main():
     print("Parsing yaml files...", flush=True)
     out = parse_yamls()
 
+    if os.path.exists("out"):
+        shutil.rmtree("out")
     os.mkdir("out")
 
     # write feed to file

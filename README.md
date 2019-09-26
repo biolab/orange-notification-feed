@@ -42,6 +42,8 @@ accept_button_label: [string]
 reject_button_label: [string]
 ```
 
+The start and end dates are **inclusive**.
+
 Supported operators: `<`, `>`, `<=`, `>=`, `==`
 
 In an installed requirement:
