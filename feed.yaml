@@ -16,21 +16,6 @@
   type: null
 - !Notification
   accept_button_label: Ok
-  end: 2019-10-04
-  icon: canvas/icons/statistics-request.png
-  id: 24092019-discord
-  link: https://discord.gg/47gRDUQ
-  reject_button_label: 'No'
-  requirements:
-    installed:
-    - Orange3>3.22
-  start: 2019-09-25
-  text: You are invited to join our new Discord server, a group chat where you can
-    raise suggestions, ask questions, and share with us how you use Orange.
-  title: Join the Support Channel
-  type: announcement
-- !Notification
-  accept_button_label: Ok
   end: null
   icon: canvas/icons/statistics-request.png
   id: 13092019-statisticsRequest
