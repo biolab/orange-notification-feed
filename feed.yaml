@@ -18,6 +18,20 @@
   accept_button_label: Ok
   end: null
   icon: canvas/icons/statistics-request.png
+  id: 16102019-tutorialOffer
+  link: https://www.youtube.com/watch?v=HXjnDIgGDuI&list=PLmNPvQr9Tf-ZSDLwOzxpvY-HrE0yv-8Fy
+  reject_button_label: 'No'
+  requirements:
+    local_config:
+    - startup/launch-count<5
+  start: null
+  text: New to Orange? Get started by checking out our video tutorials!
+  title: Orange Tutorials
+  type: null
+- !Notification
+  accept_button_label: Ok
+  end: null
+  icon: canvas/icons/statistics-request.png
   id: 13092019-statisticsRequest
   link: orange://enable-statistics
   reject_button_label: 'No'
