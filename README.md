@@ -44,11 +44,11 @@ reject_button_label: [string]
 
 Supported operators: `<`, `>`, `<=`, `>=`, `==`
 
-In an installed requirement:
+`installed` requirements check installed packages (add-ons and Orange3). In an installed requirement:
 - `[package-name]` is syntactic sugar for `[package-name]>=0` (package is installed).
 - `~[package-name]` is syntactic sugar for `[package-name]==-1` (package is not installed).
 
-When requiring a local configuration value, the required value is cast from string to the configuration's value before comparison, with the exception of booleans: `True`, `true`, `1`, `False`, `false`, `0` correctly map to a boolean value when compared against a boolean local configuration value.
+`local_config` requirements check preferences and other values stored in `~/.config/biolab.si/Orange.ini`. When requiring a local config value, the required value is cast from string to the configuration's value type before comparison, with the exception of booleans: `True`, `true`, `1`, `False`, `false`, `0`, which correctly map to a boolean value when compared against a boolean local configuration value.
 
 ### Example notification
 
