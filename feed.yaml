@@ -37,7 +37,7 @@
   reject_button_label: 'No'
   requirements:
     installed:
-    - Orange3>3.23
+    - Orange3>=3.24
     local_config:
     - error-reporting/send-statistics==false
   start: null
