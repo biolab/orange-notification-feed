@@ -1,6 +1,6 @@
 requirements:
     installed:
-        - Orange3>3.23
+        - Orange3>=3.24
     local_config:
         - error-reporting/send-statistics==false 
 icon: "canvas/icons/statistics-request.png" 
