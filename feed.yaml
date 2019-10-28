@@ -46,3 +46,19 @@
     with Orange.
   title: Anonymous Usage Statistics
   type: null
+- !Notification
+  accept_button_label: Ok
+  end: 2019-12-31
+  icon: canvas/icons/statistics-request.png
+  id: 24102019-discordInvitation
+  link: https://discord.gg/FWrfeXV
+  reject_button_label: 'No'
+  requirements:
+    installed:
+    - Orange3>3.22
+  start: 2019-10-24
+  text: Due to a technical mishap, you are once again invited to join our new Discord
+    server, a group chat where you can ask questions, raise suggestions, and share
+    with us how you use Orange.
+  title: Join the Support Channel
+  type: announcement
