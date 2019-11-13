@@ -39,11 +39,11 @@
     installed:
     - Orange3>=3.24
     local_config:
-    - error-reporting/send-statistics==false
+    - reporting/send-statistics==false
   start: null
-  text: Do you wish to opt-in to sharing statistics about how you use Orange? All
-    information is anonymized and used exclusively for understanding how users interact
-    with Orange.
+  text: 'Do you wish to opt-in to sharing statistics about how you use Orange? <a
+    href="https://orange.biolab.si/statistics-more-info" style="color: orange;">More
+    info...</a>'
   title: Anonymous Usage Statistics
   type: null
 - !Notification
