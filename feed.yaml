@@ -1,24 +1,8 @@
 - !Notification
   accept_button_label: Ok
   end: null
-  icon: canvas/icons/short-survey.png
-  id: 23082019-shortSurvey
-  link: https://orange.biolab.si/survey/short.html
-  reject_button_label: 'No'
-  requirements:
-    local_config:
-    - startup/launch-count>5
-  start: null
-  text: 'We want to get to know our users better.
-
-    Would you care to fill out a 1-minute survey?'
-  title: Short survey
-  type: null
-- !Notification
-  accept_button_label: Ok
-  end: null
   icon: canvas/icons/statistics-request.png
-  id: 16102019-tutorialOffer
+  id: 24102019-discordInvitation
   link: https://www.youtube.com/watch?v=HXjnDIgGDuI&list=PLmNPvQr9Tf-ZSDLwOzxpvY-HrE0yv-8Fy
   reject_button_label: 'No'
   requirements:
@@ -32,7 +16,7 @@
   accept_button_label: Ok
   end: null
   icon: canvas/icons/statistics-request.png
-  id: 13092019-statisticsRequest
+  id: 24102019-discordInvitation
   link: orange://enable-statistics
   reject_button_label: 'No'
   requirements:
@@ -48,6 +32,22 @@
   type: null
 - !Notification
   accept_button_label: Ok
+  end: null
+  icon: canvas/icons/short-survey.png
+  id: 24102019-discordInvitation
+  link: https://orange.biolab.si/survey/short.html
+  reject_button_label: 'No'
+  requirements:
+    local_config:
+    - startup/launch-count>5
+  start: null
+  text: 'We want to get to know our users better.
+
+    Would you care to fill out a 1-minute survey?'
+  title: Short survey
+  type: null
+- !Notification
+  accept_button_label: Ok
   end: 2019-12-31
   icon: canvas/icons/statistics-request.png
   id: 24102019-discordInvitation
@@ -56,9 +56,10 @@
   requirements:
     installed:
     - Orange3>3.22
+    local_config:
+    - startup/launch-count>10
   start: 2019-10-24
-  text: Due to a technical mishap, you are once again invited to join our new Discord
-    server, a group chat where you can ask questions, raise suggestions, and share
-    with us how you use Orange.
+  text: You are invited to join our Discord server, a group chat where you can ask
+    questions, raise suggestions, and share with us how you use Orange.
   title: Join the Support Channel
   type: announcement
