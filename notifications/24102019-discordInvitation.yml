@@ -5,9 +5,11 @@ type: announcement
 requirements:
     installed:
         - Orange3>3.22
+    local_config:
+        - startup/launch-count>10
 icon: "canvas/icons/statistics-request.png"
 title: "Join the Support Channel"
-text: "Due to a technical mishap, you are once again invited to join our new Discord server, a group chat where you can ask questions, raise suggestions, and share with us how you use Orange."
+text: "You are invited to join our Discord server, a group chat where you can ask questions, raise suggestions, and share with us how you use Orange."
 link: "https://discord.gg/FWrfeXV"
 accept_button_label: 'Ok'
 reject_button_label: 'No'
