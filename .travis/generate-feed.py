@@ -27,6 +27,7 @@ class SpecifiedYAMLNotification:
         link=None,
         accept_button_label=None,
         reject_button_label=None,
+        priority=None
     ):
         self.type = type
         self.start = start
@@ -38,6 +39,13 @@ class SpecifiedYAMLNotification:
         self.link = link
         self.accept_button_label = accept_button_label
         self.reject_button_label = reject_button_label
+        self.priority = priority
+
+    def __lt__(o1, o2):
+        p1 = o1.priority or 1
+        p2 = o2.priority or 1
+
+        return p1 < p2
 
 
 def translate_installed_requirements(installed: [str]):
@@ -123,22 +131,30 @@ class GeneratedYAMLNotification(yaml.YAMLObject):
 def parse_yamls():
     # collect yaml files
     yaml_paths = glob.glob("notifications/*.yml") + glob.glob("notifications/*.yaml")
+    
 
     # add id and tag to notifications, concat into list
-    out = []
+    specified_yamls = []
     for path in yaml_paths:
         try:
             f = open(path)
             loaded = yaml.safe_load(f)
             y = SpecifiedYAMLNotification(**loaded)
-            generated = GeneratedYAMLNotification.from_specified(y)
+            specified_yamls.append(y)
         except:
             print("Failed to load " + path)
             continue
-        generated.id = Path(path).stem
-        out.append(generated)
 
-    return out
+    # sort by priority 
+    specified_yamls.sort(reverse=True)
+    
+    generated_yamls = []
+    for spec in specified_yamls:
+        g = GeneratedYAMLNotification.from_specified(spec)
+        g.id = Path(path).stem
+        generated_yamls.append(g)
+    
+    return generated_yamls
 
 
 def main():
