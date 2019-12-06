@@ -40,6 +40,7 @@ text: [string]  # can contain hrefs
 link: [url-string]  # implement custom actions with orange:// scheme
 accept_button_label: [string]
 reject_button_label: [string]
+priority: [integer]
 ```
 
 Supported operators: `<`, `>`, `<=`, `>=`, `==`
@@ -49,6 +50,8 @@ Supported operators: `<`, `>`, `<=`, `>=`, `==`
 - `~[package-name]` is syntactic sugar for `[package-name]==-1` (package is not installed).
 
 `local_config` requirements check preferences and other values stored in `~/.config/biolab.si/Orange.ini`. When requiring a local config value, the required value is cast from string to the configuration's value type before comparison, with the exception of booleans: `True`, `true`, `1`, `False`, `false`, `0`, which correctly map to a boolean value when compared against a boolean local configuration value.
+
+Higher priority notifications are shown first. If priority is not specified, it defaults to 1.
 
 ### Example notification
 
