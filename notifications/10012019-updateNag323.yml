@@ -1,0 +1,14 @@
+# default value for update check was set to False in versions 3.23 and 3.24
+# a 3.24 notification should be created upon the release of 3.25
+requirements:
+    installed:
+        - Orange3>=3.23.0
+        - Orange3<=3.23.1
+    local_config:
+        - startup/check-updates==false
+icon: "widgets/icons/Dlg_down3.png" 
+title: "Orange Update Available"
+text: "Current version: <b>3.23</b><br>\nLatest version: <b>3.24</b>"
+link: "https://orange.biolab.si/download/"
+accept_button_label: 'Download'
+reject_button_label: 'Skip this Version'
