@@ -31,6 +31,26 @@
   title: Anonymous Usage Statistics
   type: null
 - !Notification
+  accept_button_label: Download
+  end: null
+  icon: widgets/icons/Dlg_down3.png
+  id: 24102019-discordInvitation
+  link: https://orange.biolab.si/download/
+  reject_button_label: Skip this Version
+  requirements:
+    installed:
+    - Orange3>=3.23.0
+    - Orange3<=3.23.1
+    - Orange3>=0
+    local_config:
+    - startup/check-updates==false
+  start: null
+  text: 'Current version: <b>3.23</b><br>
+
+    Latest version: <b>3.24</b>'
+  title: Orange Update Available
+  type: null
+- !Notification
   accept_button_label: Ok
   end: null
   icon: canvas/icons/short-survey.png
