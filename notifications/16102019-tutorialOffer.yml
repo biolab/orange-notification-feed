@@ -6,5 +6,5 @@ title: "Orange Tutorials"
 text: "New to Orange? Get started by checking out our video tutorials!"
 link: "https://www.youtube.com/watch?v=HXjnDIgGDuI&list=PLmNPvQr9Tf-ZSDLwOzxpvY-HrE0yv-8Fy"
 accept_button_label: 'Ok'
-reject_button_label: 'No'
+reject_button_label: "Don't show again"
 priority: 10

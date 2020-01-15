@@ -8,5 +8,5 @@ title: "Anonymous Usage Statistics"
 text: 'Do you wish to opt-in to sharing statistics about how you use Orange? <a href="https://orange.biolab.si/statistics-more-info" style="color: orange;">More info...</a>'
 link: "orange://enable-statistics"
 accept_button_label: 'Ok'
-reject_button_label: 'No'
+reject_button_label: "Don't show again"
 priority: 5
