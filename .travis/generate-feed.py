@@ -134,12 +134,14 @@ def parse_yamls():
     
 
     # add id and tag to notifications, concat into list
+    path_map = {}
     specified_yamls = []
     for path in yaml_paths:
         try:
             f = open(path)
             loaded = yaml.safe_load(f)
             y = SpecifiedYAMLNotification(**loaded)
+            path_map[y] = path
             specified_yamls.append(y)
         except:
             print("Failed to load " + path)
@@ -151,7 +153,7 @@ def parse_yamls():
     generated_yamls = []
     for spec in specified_yamls:
         g = GeneratedYAMLNotification.from_specified(spec)
-        g.id = Path(path).stem
+        g.id = Path(path_map[spec]).stem
         generated_yamls.append(g)
     
     return generated_yamls
