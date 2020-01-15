@@ -2,9 +2,9 @@
   accept_button_label: Ok
   end: null
   icon: canvas/icons/statistics-request.png
-  id: 24102019-discordInvitation
+  id: 16102019-tutorialOffer
   link: https://www.youtube.com/watch?v=HXjnDIgGDuI&list=PLmNPvQr9Tf-ZSDLwOzxpvY-HrE0yv-8Fy
-  reject_button_label: 'No'
+  reject_button_label: Don't show again
   requirements:
     local_config:
     - startup/launch-count<5
@@ -16,9 +16,9 @@
   accept_button_label: Ok
   end: null
   icon: canvas/icons/statistics-request.png
-  id: 24102019-discordInvitation
+  id: 13092019-statisticsRequest
   link: orange://enable-statistics
-  reject_button_label: 'No'
+  reject_button_label: Don't show again
   requirements:
     installed:
     - Orange3>=3.24
@@ -34,7 +34,7 @@
   accept_button_label: Download
   end: null
   icon: widgets/icons/Dlg_down3.png
-  id: 24102019-discordInvitation
+  id: 10012019-updateNag323
   link: https://orange.biolab.si/download/
   reject_button_label: Skip this Version
   requirements:
@@ -54,9 +54,9 @@
   accept_button_label: Ok
   end: null
   icon: canvas/icons/short-survey.png
-  id: 24102019-discordInvitation
+  id: 23082019-shortSurvey
   link: https://orange.biolab.si/survey/short.html
-  reject_button_label: 'No'
+  reject_button_label: Don't show again
   requirements:
     local_config:
     - startup/launch-count>5
@@ -72,7 +72,7 @@
   icon: canvas/icons/statistics-request.png
   id: 24102019-discordInvitation
   link: https://discord.gg/FWrfeXV
-  reject_button_label: 'No'
+  reject_button_label: Don't show again
   requirements:
     installed:
     - Orange3>3.22
