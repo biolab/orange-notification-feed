@@ -1,0 +1,13 @@
+# notification about recent COVID-19 blog posts
+start: 2020-04-24
+end: 2020-05-08
+type: blog
+requirements:
+    installed:
+        - Orange3>3.22
+icon: "canvas/icons/blog.png"
+title: "COVID-19 Blog Series"
+text: "We prepared a series of blog posts explaining how to analyze COVID-19 data, plot it on a map and explore it in time."
+link: "https://orange.biolab.si/categories/covid-19/"
+accept_button_label: "Read blogs"
+reject_button_label: "Don't show again"
