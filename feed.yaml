@@ -67,6 +67,21 @@
   title: Short survey
   type: null
 - !Notification
+  accept_button_label: Read blogs
+  end: 2020-05-08
+  icon: canvas/icons/blog.png
+  id: 24012020-covidBlogs
+  link: https://orange.biolab.si/categories/covid-19/
+  reject_button_label: Don't show again
+  requirements:
+    installed:
+    - Orange3>3.22
+  start: 2020-04-24
+  text: We prepared a series of blog posts explaining how to analyze COVID-19 data,
+    plot it on a map and explore it in time.
+  title: COVID-19 Blog Series
+  type: blog
+- !Notification
   accept_button_label: Ok
   end: 2019-12-31
   icon: canvas/icons/statistics-request.png
