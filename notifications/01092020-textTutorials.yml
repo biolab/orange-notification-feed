@@ -1,0 +1,13 @@
+# nofitication about text mining tutorials
+start: 2020-09-01
+end: 2020-09-08
+type: announcement
+requirements:
+    installed:
+        - Orange3>3.22
+icon: "canvas/icons/announcement.png"
+title: "Text Mining Tutorials"
+text: "We have just published four new text mining tutorials with the support from our friends at NumFocus."
+link: "https://www.youtube.com/playlist?list=PLmNPvQr9Tf-bxmjlFRg0AGjMzzd1y8_kB"
+accept_button_label: "See tutorials"
+reject_button_label: "Don't show again"
