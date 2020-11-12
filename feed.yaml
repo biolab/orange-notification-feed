@@ -51,20 +51,37 @@
   title: Orange Update Available
   type: null
 - !Notification
-  accept_button_label: Ok
-  end: null
-  icon: canvas/icons/short-survey.png
-  id: 23082019-shortSurvey
-  link: https://orange.biolab.si/survey/short.html
+  accept_button_label: See tutorials
+  end: 2020-09-08
+  icon: canvas/icons/announcement.png
+  id: 01092020-textTutorials
+  link: https://www.youtube.com/playlist?list=PLmNPvQr9Tf-bxmjlFRg0AGjMzzd1y8_kB
   reject_button_label: Don't show again
   requirements:
+    installed:
+    - Orange3>3.22
+  start: 2020-09-01
+  text: We have just published four new text mining tutorials with the support from
+    our friends at NumFocus.
+  title: Text Mining Tutorials
+  type: announcement
+- !Notification
+  accept_button_label: Download
+  end: null
+  icon: widgets/icons/Dlg_down3.png
+  id: 16062020-updateNag324
+  link: https://orange.biolab.si/download/
+  reject_button_label: Skip this Version
+  requirements:
+    installed:
+    - Orange3==3.24.0
     local_config:
-    - startup/launch-count>5
+    - startup/check-updates==false
   start: null
-  text: 'We want to get to know our users better.
+  text: 'Current version: <b>3.24</b><br>
 
-    Would you care to fill out a 1-minute survey?'
-  title: Short survey
+    Latest version: <b>3.25</b>'
+  title: Orange Update Available
   type: null
 - !Notification
   accept_button_label: Read blogs
