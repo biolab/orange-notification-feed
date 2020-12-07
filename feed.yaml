@@ -31,26 +31,6 @@
   title: Anonymous Usage Statistics
   type: null
 - !Notification
-  accept_button_label: Download
-  end: null
-  icon: widgets/icons/Dlg_down3.png
-  id: 10012019-updateNag323
-  link: https://orange.biolab.si/download/
-  reject_button_label: Skip this Version
-  requirements:
-    installed:
-    - Orange3>=3.23.0
-    - Orange3<=3.23.1
-    - Orange3>=0
-    local_config:
-    - startup/check-updates==false
-  start: null
-  text: 'Current version: <b>3.23</b><br>
-
-    Latest version: <b>3.24</b>'
-  title: Orange Update Available
-  type: null
-- !Notification
   accept_button_label: See tutorials
   end: 2020-09-08
   icon: canvas/icons/announcement.png
@@ -65,24 +45,6 @@
     our friends at NumFocus.
   title: Text Mining Tutorials
   type: announcement
-- !Notification
-  accept_button_label: Download
-  end: null
-  icon: widgets/icons/Dlg_down3.png
-  id: 16062020-updateNag324
-  link: https://orange.biolab.si/download/
-  reject_button_label: Skip this Version
-  requirements:
-    installed:
-    - Orange3==3.24.0
-    local_config:
-    - startup/check-updates==false
-  start: null
-  text: 'Current version: <b>3.24</b><br>
-
-    Latest version: <b>3.25</b>'
-  title: Orange Update Available
-  type: null
 - !Notification
   accept_button_label: Read blogs
   end: 2020-05-08
