@@ -1,0 +1,13 @@
+requirements:
+    local_config:
+        - startup/launch-count>15
+icon: "widgets/evaluate/icons/TestLearners2.svg"
+title: "Every Little Bit Helps"
+text: "Orange is free and open-source. Consider contributing to the project by sponsoring us."
+link: "https://github.com/sponsors/biolab/"
+accept_button_label: 'Ok'
+reject_button_label: "Don't show again"
+priority: 50
+start: 2021-01-01
+end: 2021-01-08
+type: announcement
