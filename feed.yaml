@@ -1,5 +1,20 @@
 - !Notification
   accept_button_label: Ok
+  end: 2021-01-08
+  icon: widgets/evaluate/icons/TestLearners2.svg
+  id: 01012021-ghsponsors
+  link: https://github.com/sponsors/biolab/
+  reject_button_label: Don't show again
+  requirements:
+    local_config:
+    - startup/launch-count>15
+  start: 2021-01-01
+  text: Orange is free and open-source. Consider contributing to the project by sponsoring
+    us.
+  title: Every Little Bit Helps
+  type: announcement
+- !Notification
+  accept_button_label: Ok
   end: null
   icon: canvas/icons/statistics-request.png
   id: 16102019-tutorialOffer
