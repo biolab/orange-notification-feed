@@ -94,7 +94,7 @@
   type: announcement
 - !Notification
   accept_button_label: Ok
-  end: 2020-12-28
+  end: 2021-04-02
   icon: widgets/icons/Dlg_down3.png
   id: 07122020-educatorsquestionnaire
   link: https://docs.google.com/forms/d/e/1FAIpQLSfzmP-uMBCFezN_J6p9zXV--Kzj1Xznekv59gEwr8GhuMe9TA/viewform?usp=sf_link
@@ -102,7 +102,7 @@
   requirements:
     local_config:
     - startup/launch-count>10
-  start: 2020-12-07
+  start: null
   text: Are you a student or a teacher? Fill out a short questionnaire to help us
     improve Orange for education.
   title: Calling all Scholars!
