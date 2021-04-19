@@ -1,0 +1,10 @@
+end: 2021-05-21
+requirements:
+    local_config:
+        - startup/launch-count>2
+icon: "widgets/icons/information.png" 
+title: "Help us Improve"
+text: "We would like to know how you're learning to use Orange. Help us improve by completing a short questionnaire." 
+link: "https://standrews.eu.qualtrics.com/jfe/form/SV_8wwGywUKVj9zVIy"
+accept_button_label: Ok
+reject_button_label: Don't show again
