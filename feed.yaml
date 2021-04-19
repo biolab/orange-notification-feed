@@ -54,12 +54,11 @@
   reject_button_label: Don't show again
   requirements:
     local_config:
-    - startup/launch-count>=5
-    - startup/launch-count<10
+    - startup/launch-count>2
   start: null
   text: We would like to know how you're learning to use Orange. Help us improve by
     completing a short questionnaire.
-  title: New to Orange?
+  title: Help us Improve
   type: null
 - !Notification
   accept_button_label: See tutorials
