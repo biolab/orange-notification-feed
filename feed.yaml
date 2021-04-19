@@ -46,6 +46,22 @@
   title: Anonymous Usage Statistics
   type: null
 - !Notification
+  accept_button_label: Ok
+  end: 2021-05-21
+  icon: widgets/icons/information.png
+  id: 19042021-usabilityquestionnaire
+  link: https://standrews.eu.qualtrics.com/jfe/form/SV_8wwGywUKVj9zVIy
+  reject_button_label: Don't show again
+  requirements:
+    local_config:
+    - startup/launch-count>=5
+    - startup/launch-count<10
+  start: null
+  text: We would like to know how you're learning to use Orange. Help us improve by
+    completing a short questionnaire.
+  title: New to Orange?
+  type: null
+- !Notification
   accept_button_label: See tutorials
   end: 2020-09-08
   icon: canvas/icons/announcement.png
