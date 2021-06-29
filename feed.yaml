@@ -76,8 +76,8 @@
   title: COVID-19 Blog Series
   type: blog
 - !Notification
-  accept_button_label: Ok
-  end: 2019-12-31
+  accept_button_label: Join Discord
+  end: 2021-07-31
   icon: canvas/icons/statistics-request.png
   id: 24102019-discordInvitation
   link: https://discord.gg/FWrfeXV
@@ -88,9 +88,9 @@
     local_config:
     - startup/launch-count>10
   start: 2019-10-24
-  text: You are invited to join our Discord server, a group chat where you can ask
-    questions, raise suggestions, and share with us how you use Orange.
-  title: Join the Support Channel
+  text: Getting the hang of Orange? Join our Discord server, come chat, show us what
+    you've been working on. By all means, come for the memes.
+  title: Join our Discord Server
   type: announcement
 - !Notification
   accept_button_label: Ok
