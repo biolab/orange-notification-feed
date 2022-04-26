@@ -3,9 +3,9 @@ requirements:
         - startup/launch-count>2
 icon: "widgets/model/icons/AdaBoost.svg"
 title: "Webinar for Educators"
-text: "Are you a teacher or instructor? We are announcing a webinar on training data science with Orange. More info at the link. Attendance is limited; enroll today!"
+text: "Are you a teacher or instructor? We are announcing a webinar on training data science with Orange. Attendance is limited; enroll today!"
 link: "https://forms.gle/9Q4uYKFgTKhAYJwy5"
-accept_button_label: 'Ok'
+accept_button_label: 'Enroll'
 reject_button_label: "Don't show again"
 priority: 50
 start: 2022-04-25
