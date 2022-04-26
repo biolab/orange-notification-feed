@@ -15,6 +15,21 @@
   type: announcement
 - !Notification
   accept_button_label: Ok
+  end: 2022-05-20
+  icon: widgets/model/icons/AdaBoost.svg
+  id: 26042022-eduWebinar
+  link: https://forms.gle/9Q4uYKFgTKhAYJwy5
+  reject_button_label: Don't show again
+  requirements:
+    local_config:
+    - startup/launch-count>2
+  start: 2022-04-25
+  text: Are you a teacher or instructor? We are announcing a webinar on training data
+    science with Orange. More info at the link. Attendance is limited; enroll today!
+  title: Webinar for Educators
+  type: announcement
+- !Notification
+  accept_button_label: Ok
   end: null
   icon: canvas/icons/statistics-request.png
   id: 16102019-tutorialOffer
@@ -45,21 +60,6 @@
     info...</a>'
   title: Anonymous Usage Statistics
   type: null
-- !Notification
-  accept_button_label: See tutorials
-  end: 2020-09-08
-  icon: canvas/icons/announcement.png
-  id: 01092020-textTutorials
-  link: https://www.youtube.com/playlist?list=PLmNPvQr9Tf-bxmjlFRg0AGjMzzd1y8_kB
-  reject_button_label: Don't show again
-  requirements:
-    installed:
-    - Orange3>3.22
-  start: 2020-09-01
-  text: We have just published four new text mining tutorials with the support from
-    our friends at NumFocus.
-  title: Text Mining Tutorials
-  type: announcement
 - !Notification
   accept_button_label: Read blogs
   end: 2020-05-08
@@ -107,3 +107,18 @@
     improve Orange for education.
   title: Calling all Scholars!
   type: null
+- !Notification
+  accept_button_label: See tutorials
+  end: 2020-09-08
+  icon: canvas/icons/announcement.png
+  id: 01092020-textTutorials
+  link: https://www.youtube.com/playlist?list=PLmNPvQr9Tf-bxmjlFRg0AGjMzzd1y8_kB
+  reject_button_label: Don't show again
+  requirements:
+    installed:
+    - Orange3>3.22
+  start: 2020-09-01
+  text: We have just published four new text mining tutorials with the support from
+    our friends at NumFocus.
+  title: Text Mining Tutorials
+  type: announcement
