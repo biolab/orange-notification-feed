@@ -14,7 +14,7 @@
   title: Every Little Bit Helps
   type: announcement
 - !Notification
-  accept_button_label: Ok
+  accept_button_label: Enroll
   end: 2022-05-20
   icon: widgets/model/icons/AdaBoost.svg
   id: 26042022-eduWebinar
@@ -25,7 +25,7 @@
     - startup/launch-count>2
   start: 2022-04-25
   text: Are you a teacher or instructor? We are announcing a webinar on training data
-    science with Orange. More info at the link. Attendance is limited; enroll today!
+    science with Orange. Attendance is limited; enroll today!
   title: Webinar for Educators
   type: announcement
 - !Notification
