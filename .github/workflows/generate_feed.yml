@@ -1,0 +1,44 @@
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: 'src'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r src/requirements.txt
+
+      - name: Generate feed.yml
+        run: |
+          cd src/
+          python generate-feed.py
+          cd ../
+
+      - name: Checkout other branch
+        uses: actions/checkout@v4
+        with:
+          ref: generated-feed 
+          path: 'generated-feed'
+
+      - name: Copy feed.yml to other branch
+        run: |
+          cp src/out/feed.yaml generated-feed/feed.yaml
+
+      - name: Commit and Push
+        run: |
+          cd generated-feed
+          git status
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add feed.yaml
+          git commit -m "Update feed.yaml" || echo "No changes to commit"
+          git push origin HEAD:generated-feed
