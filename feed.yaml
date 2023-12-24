@@ -1,19 +1,4 @@
 - !Notification
-  accept_button_label: Ok
-  end: 2021-01-08
-  icon: widgets/evaluate/icons/TestLearners2.svg
-  id: 01012021-ghsponsors
-  link: https://github.com/sponsors/biolab/
-  reject_button_label: Don't show again
-  requirements:
-    local_config:
-    - startup/launch-count>15
-  start: 2021-01-01
-  text: Orange is free and open-source. Consider contributing to the project by sponsoring
-    us.
-  title: Every Little Bit Helps
-  type: announcement
-- !Notification
   accept_button_label: Enroll
   end: 2022-05-20
   icon: widgets/model/icons/AdaBoost.svg
@@ -27,6 +12,21 @@
   text: Are you a teacher or instructor? We are announcing a webinar on training data
     science with Orange. Attendance is limited; enroll today!
   title: Webinar for Educators
+  type: announcement
+- !Notification
+  accept_button_label: Ok
+  end: 2021-01-08
+  icon: widgets/evaluate/icons/TestLearners2.svg
+  id: 01012021-ghsponsors
+  link: https://github.com/sponsors/biolab/
+  reject_button_label: Don't show again
+  requirements:
+    local_config:
+    - startup/launch-count>15
+  start: 2021-01-01
+  text: Orange is free and open-source. Consider contributing to the project by sponsoring
+    us.
+  title: Every Little Bit Helps
   type: announcement
 - !Notification
   accept_button_label: Ok
@@ -76,6 +76,21 @@
   title: COVID-19 Blog Series
   type: blog
 - !Notification
+  accept_button_label: Ok
+  end: 2021-05-02
+  icon: widgets/icons/Dlg_down3.png
+  id: 07122020-educatorsquestionnaire
+  link: https://docs.google.com/forms/d/e/1FAIpQLSfzmP-uMBCFezN_J6p9zXV--Kzj1Xznekv59gEwr8GhuMe9TA/viewform?usp=sf_link
+  reject_button_label: Don't show again
+  requirements:
+    local_config:
+    - startup/launch-count>10
+  start: null
+  text: Are you a student or a teacher? Fill out a short questionnaire to help us
+    improve Orange for education.
+  title: Calling all Scholars!
+  type: null
+- !Notification
   accept_button_label: Join Discord
   end: 2021-07-31
   icon: canvas/icons/statistics-request.png
@@ -93,21 +108,6 @@
   title: Join our Discord Server
   type: announcement
 - !Notification
-  accept_button_label: Ok
-  end: 2021-05-02
-  icon: widgets/icons/Dlg_down3.png
-  id: 07122020-educatorsquestionnaire
-  link: https://docs.google.com/forms/d/e/1FAIpQLSfzmP-uMBCFezN_J6p9zXV--Kzj1Xznekv59gEwr8GhuMe9TA/viewform?usp=sf_link
-  reject_button_label: Don't show again
-  requirements:
-    local_config:
-    - startup/launch-count>10
-  start: null
-  text: Are you a student or a teacher? Fill out a short questionnaire to help us
-    improve Orange for education.
-  title: Calling all Scholars!
-  type: null
-- !Notification
   accept_button_label: See tutorials
   end: 2020-09-08
   icon: canvas/icons/announcement.png
@@ -121,4 +121,18 @@
   text: We have just published four new text mining tutorials with the support from
     our friends at NumFocus.
   title: Text Mining Tutorials
+  type: announcement
+- !Notification
+  accept_button_label: Read more
+  end: 2024-01-20
+  icon: canvas/icons/announcement.png
+  id: 20122023-survivalAnalysisTutorial
+  link: https://orangedatamining.com/blog/our-christmas-present-free-orange-t-shirt/
+  reject_button_label: Don't show again
+  requirements:
+    local_config:
+    - startup/launch-count>2
+  start: 2023-12-20
+  text: Participate in a survival analysis tutorial to learn and claim a free T-shirt.
+  title: Free Orange T-shirt!
   type: announcement
